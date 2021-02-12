@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Git的基本使用</title>
+      <link href="2021/02/12/Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+      <url>2021/02/12/Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="ubuntu下-安装git"><a href="#ubuntu下-安装git" class="headerlink" title="ubuntu下 安装git"></a>ubuntu下 安装git</h2><ol><li>打开终端，输入sudo apt-get install git</li><li>安装完成后，查看版本号 git –version</li><li>配置git<ol><li>配置用户名 git config –global user.name “”</li><li>配置邮箱 git config –global user.email “”</li></ol></li></ol><h2 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h2><ol><li>提交步骤<ol><li>git init <strong>初始化git仓库</strong></li><li>git status <strong>查看文件状态</strong></li><li>git add 文件列表 <strong>追踪文件</strong></li><li>git commit -m 提交信息 <strong>向仓库中提交代码</strong></li><li>git log <strong>查看提交信息</strong></li></ol></li><li>撤销<ul><li>用暂存区中的文件覆盖工作目录中的文件： git checkout 文件</li><li>将文件从暂存区中删除： git rm –cached 文件</li><li>将git仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录： git rest –hard commitID</li></ul></li></ol><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>使用分支，可以使开发者从开发主线分离出来，以免影响主线</p><h3 id="主分支"><a href="#主分支" class="headerlink" title="主分支"></a>主分支</h3><p>主分支(master)就是第一次向git仓库提交更新记录时自动产生的一个分支</p><h3 id="开发分支"><a href="#开发分支" class="headerlink" title="开发分支"></a>开发分支</h3><p>开发分支(develop)作为开发的分支，基于master分支创建</p><h3 id="功能分支"><a href="#功能分支" class="headerlink" title="功能分支"></a>功能分支</h3><p>功能分支(feature)作为开发具体功能的分支，基于开发分支创建</p><h2 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h2><ul><li>git branch <strong>查看分支</strong></li><li>git branch 分支名称 <strong>创建分支</strong></li><li>git checkout 分支名称 <strong>切换分支</strong></li><li>git merge 来源分支 <strong>合并分支</strong> (来源分支依然存在)</li><li>git branch -d 分支名称 <strong>删除分支</strong> (分支被合并后才允许删除) (-D强制删除)</li></ul><h2 id="暂时保存更改"><a href="#暂时保存更改" class="headerlink" title="暂时保存更改"></a>暂时保存更改</h2><p>在git中，可以暂时提取分支上所有的改动并存储，让开发人员得到一个干净的副本，临时转向其他工作。</p><p>使用场景：分支临时切换</p><ul><li>存储临时变动：git stash</li><li>恢复改动：git stash pop</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络笔记-第二章</title>
       <link href="2021/01/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
       <url>2021/01/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>

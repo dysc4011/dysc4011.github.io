@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JavaScript箭头函数与普通函数</title>
+      <link href="2021/02/12/JavaScript%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0/"/>
+      <url>2021/02/12/JavaScript%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h3><ul><li>普通函数：function(){}</li><li>箭头函数: ()=&gt;{}</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> words = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> words_normal = words.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item += <span class="string">&#x27;d&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数只有一个参数无需写括号</span></span><br><span class="line"><span class="comment">// 如果只有一个表达式的时候可以不添加大括号</span></span><br><span class="line"><span class="keyword">let</span> words_arrow = words.map(<span class="function"><span class="params">item</span> =&gt;</span> item += <span class="string">&#x27;d&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(words_arrow);</span><br></pre></td></tr></table></figure><h3 id="new-与-原型"><a href="#new-与-原型" class="headerlink" title="new 与 原型"></a>new 与 原型</h3><p>箭头函数不能创建new函数的实例</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Star</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Star.prototype.name = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> normal = <span class="keyword">new</span> Star();</span><br><span class="line"><span class="built_in">console</span>.log(normal);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Arrow = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> arrow = <span class="keyword">new</span> Arrow();</span><br></pre></td></tr></table></figure><p><strong>得到如下结果</strong></p><p><img src="https://img-blog.csdnimg.cn/20210212171324243.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhbnl1YW5h,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h3 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h3><p>箭头函数无arguments对象</p><p>但仍然可以让箭头函数看起来有arguments的效果</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normal</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">()=&gt;</span> <span class="built_in">arguments</span>.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arrow = normal(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">// 由于作用域链的关系，箭头函数保存了arguments的长度</span></span><br><span class="line"><span class="built_in">console</span>.log(arrow()); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure><h3 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h3><p>箭头函数的this值取决于外部普通函数里的this值</p><p>箭头函数不能通过call apply bind来改变this的值，<br>但箭头函数仍然可以调用call apply bind方法</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://img-blog.csdnimg.cn/20210212171228809.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhbnl1YW5h,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 箭头函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git的基本使用</title>
       <link href="2021/02/12/Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
       <url>2021/02/12/Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>

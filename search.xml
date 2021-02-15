@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vim的常用快捷操作(在vscode里使用vim) 长期更新</title>
+      <link href="2021/02/15/vim/"/>
+      <url>2021/02/15/vim/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近趁着寒假有时间，随便鼓捣了会Ubuntu和vim，在练习了一段时间vim后，发现它的使用思想大大提高了我的编辑效率。但vim需要在linux系统中使用，因此我就在vscode里安装了vim插件进行使用，下面是我总结的一些vim常用的快捷键 方便记忆</p><h2 id="vim基本快捷键"><a href="#vim基本快捷键" class="headerlink" title="vim基本快捷键"></a>vim基本快捷键</h2><h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><p>上下左右 kjhl</p><p>数字 + gg 跳到某一行</p><p>command模式下输入行号 同样是跳到某一行</p><p>f{char} 光标跳到下一个char所在的位置<br>F{char} 光标跳到上一个char所在的位置</p><p>t{char} 光标跳到下一个char所在的位置之前<br>T{char} 光标跳到上一个char所在的位置之前</p><p>, 往前查找上次的字符<br>; 重复上次的字符查找操作</p><h3 id="动作-motion"><a href="#动作-motion" class="headerlink" title="动作(motion)"></a>动作(motion)</h3><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p>i 插入</p><p>shift + i 在行首插入</p><p>a 在光标后插入</p><p>shift + a 在行尾插入</p><p>o 在下一行开始插入</p><p>shift + o 在上一行插入</p><h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><p>/char 查找</p><p>n 往下查找</p><p>shift + n 往上查找</p><p>*同样</p><h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h4><p>p 在下一行复制</p><p>shitf + p 在上一行复制</p><h4 id="行内指令"><a href="#行内指令" class="headerlink" title="行内指令"></a>行内指令</h4><p>w 跳到一个单词的开头</p><p>b 跳到本单词或一个单词的开头</p><p>e 跳到本单词或一个单词的结尾</p><p>ge 跳到上一个单词的结尾</p><p>0 跳到行首</p><p>^ 跳到从行首开始的第一个非空字符</p><p>$ 跳到行尾</p><h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p>dd 删除一整行</p><p>x 删除光标所在的字符</p><p>s 删除光标所在的字符并且进入insert模式</p><p>dw 删除光标所在单词以后的字符</p><p>shift + d 删除当前行内光标所在的之后的所有内容</p><p>shift + c 删除当前行内光标所在的之后的所有内容并进入insert模式</p><p>shift + s 删除当前行并进入insert模式(保持原有缩进)</p><h4 id="行间移动"><a href="#行间移动" class="headerlink" title="行间移动"></a>行间移动</h4><p>shift + g 跳到最后一行</p><p>gg 跳到第一行</p><p>行号+g 跳到某一行</p><p>:行号 跳到某一行</p><p>数字+j 快速向下移动 数字 行 (w b e hjkl 都能如此使用)</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript箭头函数与普通函数</title>
       <link href="2021/02/12/JavaScript%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0/"/>
       <url>2021/02/12/JavaScript%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0/</url>

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建+美化hexo博客(让你拥有自己的博客)</title>
+      <link href="2021/02/25/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"/>
+      <url>2021/02/25/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="安裝必备软件"><a href="#安裝必备软件" class="headerlink" title="安裝必备软件"></a>安裝必备软件</h2><h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><p>首先我们需要安装git、node.js、npm、hexo</p><h4 id="git的安装"><a href="#git的安装" class="headerlink" title="git的安装"></a>git的安装</h4><ol><li>首先更新ubuntu存储库的软件包索引号</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><ol start="2"><li>安装git</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure><ol start="3"><li>验证并检查git的安装版本</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><ol start="4"><li>配置git</li></ol><p>此时我们需要配置自己的用户信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;....&quot;</span><br><span class="line">git config --global user.email &quot;....&quot;</span><br></pre></td></tr></table></figure><h4 id="node-js的安装"><a href="#node-js的安装" class="headerlink" title="node.js的安装"></a>node.js的安装</h4><ol><li>执行检查可更新的软件</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><ol start="2"><li>apt工具安装低版本的node、然后升级</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt install nodejs-legacy</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure><ol start="3"><li>更换淘宝的镜像</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure><ol start="4"><li>安装更新版本工具N，执行</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install n -g</span><br></pre></td></tr></table></figure><ol start="5"><li>更新node版本</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo n stable</span><br></pre></td></tr></table></figure><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><ol><li>执行</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><ol start="2"><li>检查hexo是否安装成功</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><ol><li>首先初始化hexo文件夹</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init xxx文件夹</span><br></pre></td></tr></table></figure><ol start="2"><li>本地运行博客</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><ol start="3"><li>部署博客到github</li></ol><p>首先注册github账号,然后再创建仓库</p><p><strong>注意</strong><br>仓库的名字必须是你github的用户名.github.io</p><p>创建成功后,将博客文件_config.yml更改</p><p><img src="https://s3.ax1x.com/2021/02/25/yjceaV.png"></p><p>更改完成后,执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>此时博客成功部署到github上</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vim的常用快捷操作(在vscode里使用vim) 长期更新</title>
       <link href="2021/02/15/vim/"/>
       <url>2021/02/15/vim/</url>
